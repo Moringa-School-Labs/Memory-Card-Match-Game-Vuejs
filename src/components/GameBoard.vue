@@ -7,7 +7,7 @@ export default {
   },
   data() {
     return {
-      cardsData: cardData,
+      cardsData: cardData.concat(cardData),
     };
   },
 };
@@ -16,12 +16,12 @@ export default {
 <template>
   <div class="game-board">
     <ul class="cards">
-      <li class="card">
+      <li v-for="(cardInfo, index) in cardsData" :key="index" class="card">
         <CardView viewType="front" />
         <CardView
           viewType="back"
-          imageUrl="../static_site/images/img-1.png"
-          imageAltText="An emerald cut into a diamond shape."
+          :imageUrl="cardInfo.url"
+          :imageAltText="cardInfo.altText"
         />
       </li>
     </ul>
