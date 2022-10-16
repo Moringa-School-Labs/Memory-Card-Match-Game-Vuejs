@@ -6,6 +6,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/Memory-Card-Match-Game-Vuejs",
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
