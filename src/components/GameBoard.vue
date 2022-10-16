@@ -12,7 +12,8 @@ export default {
     <p>I am the GameBoard.vue component</p>
     <ul class="cards">
       <li class="card">
-        <CardView />
+        <CardView viewType="front" />
+        <CardView viewType="back" />
       </li>
     </ul>
   </div>
