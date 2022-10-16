@@ -1,8 +1,14 @@
 <script>
 import CardView from "./CardView.vue";
+import cardData from "../data/memoryCards8.js";
 export default {
   components: {
     CardView,
+  },
+  data() {
+    return {
+      cardsData: cardData,
+    };
   },
 };
 </script>
